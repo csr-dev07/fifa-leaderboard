@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚽ WC 2026 Prediction Leaderboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-ball">⚽</div>
+    <div class="loader-text">Loading Leaderboard...</div>
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Particles -->
+  <div id="particles"></div>
+
+  <!-- Floating Balls -->
+  <div id="floating-balls"></div>
+
+  <!-- Header -->
+  <header class="hero">
+    <div class="trophy-glow">🏆</div>
+    <div class="hero-content">
+      <div class="eyebrow">FOOTBALL FANS ARENA · FIFA WORLD CUP 2026</div>
+      <h1 class="hero-title">PREDICTION<br><span class="gold-text">LEADERBOARD</span></h1>
+      <div class="hero-meta">
+        <span class="badge pulse">🔴 LIVE</span>
+        <span class="meta-item">📅 <span id="current-date"></span></span>
+        <span class="meta-item">🔄 Updated <span id="last-updated"></span></span>
+      </div>
+    </div>
+    <button id="theme-toggle" title="Toggle theme">🌙</button>
+  </header>
+
+  <!-- Stats Cards -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">👥</div>
+          <div class="stat-value" id="stat-players">—</div>
+          <div class="stat-label">Total Players</div>
+        </div>
+        <div class="stat-card gold-card">
+          <div class="stat-icon">🥇</div>
+          <div class="stat-value" id="stat-leader">—</div>
+          <div class="stat-label">Current Leader</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-value" id="stat-highest">—</div>
+          <div class="stat-label">Highest Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📊</div>
+          <div class="stat-value" id="stat-avg">—</div>
+          <div class="stat-label">Avg Score</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Controls -->
+  <section class="controls-section">
+    <div class="container">
+      <div class="controls-bar">
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Search player..." />
+        </div>
+        <div class="sort-wrap">
+          <label>Sort:</label>
+          <select id="sort-select">
+            <option value="points">⬆ Highest Points</option>
+            <option value="alpha">🔤 Alphabetical</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leaderboard -->
+  <main class="leaderboard-section">
+    <div class="container">
+      <div id="leaderboard-list"></div>
+      <div id="no-results" class="no-results hidden">No players found 😔</div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-ball">⚽</div>
+    <p>Created for <strong>Football Fans Arena</strong> · Telegram Prediction League</p>
+    <p class="footer-version">v1.0.0 · FIFA World Cup 2026</p>
+  </footer>
+
+  <script src="animations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
